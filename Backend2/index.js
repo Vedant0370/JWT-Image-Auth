@@ -73,7 +73,7 @@ const User = mongoose.model('User', {
   // Registration API
   app.post('/api/register', upload.single('profileImage'), async (req, res) => {
     const { name, email, password } = req.body;
-    const profileImage = req.file ? `http://localhost:4000/profile/${req.file.filename}` : null;
+    const profileImage = req.file ? `https://jwt-image-auth.onrender.com/profile/${req.file.filename}` : null;
 
     try {
         // Check if the email already exists
