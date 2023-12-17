@@ -70,6 +70,7 @@ const User = mongoose.model('User', {
     profileImage: String,
   });
   
+
   // Registration API
   app.post('/api/register', upload.single('profileImage'), async (req, res) => {
     const { name, email, password } = req.body;
